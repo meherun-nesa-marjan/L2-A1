@@ -24,6 +24,15 @@ interface User {
 }
 
 type ID = string | number;  // Union type alias
+
+
+## 2. What is the use of the keyof keyword in TypeScript?
+
+The keyof keyword extracts the keys of an object type as a union of string literals. This allows dynamic yet type-safe operations on object properties.
+
+**Example:**
+
+```ts
 type Person = {
   name: string;
   age: number;
@@ -37,3 +46,5 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 
 const person: Person = { name: "Alice", age: 30 };
 const name = getProperty(person, "name");  // returns "Alice"
+
+
