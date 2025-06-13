@@ -24,7 +24,7 @@ interface User {
 }
 
 type ID = string | number;  // Union type alias
-
+```
 
 ## 2. What is the use of the keyof keyword in TypeScript?
 
@@ -46,5 +46,4 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 
 const person: Person = { name: "Alice", age: 30 };
 const name = getProperty(person, "name");  // returns "Alice"
-
-
+```
